@@ -3,43 +3,43 @@ import React, { useState } from 'react';
 const projects = [
   {
     title: "Commodity Prices Forecast",
-    description: "Interactive data application for forecasting and analyzing commodity market trends.",
+    description: "Interactive data application for forecasting and analyzing prices for things like crude oil, wheat, corn and coffee .",
     category: "Data & Analytics",
     stack: ["Python", "Streamlit"],
     url: "https://commodity-prices-forecast.streamlit.app/"
   },
   {
     title: "Song Reco Pilot",
-    description: "Interactive recommendation pilot app built with Streamlit.",
+    description: "Interactive prompt recommendation pilot app built with Streamlit, which connects to an LLM -- or a RAG if LLM call fails .",
     category: "Data & Analytics",
     stack: ["Python", "Streamlit"],
     url: "https://songreco-pilot.streamlit.app/"
   },
   {
     title: "Board Game Analytics",
-    description: "Interactive data app tracking board game metrics and player stats.",
+    description: "Interactive data app tracking board game metrics and rankings, using PCS, K-means clustering and ridge regression.",
     category: "Data & Analytics",
     stack: ["Python", "Render"],
     url: "https://toomanyboardgames.onrender.com"
   },
   {
     title: "Creator Basics - A Dashboard",
-    description: "Analysis of songs created on Flow Music.",
+    description: "A vanilla analysis of songs created on Flow Music.",
     category: "Data & Analytics",
     stack: ["React", "Vibefactory", "AI"],
     url: "https://p7f515941-ub4eae18f.vibefactory.ai"
   },
   {
     title: "Transit Router",
-    description: "Dynamic routing and transit navigation web utility.",
-    category: "Prototypes",
+    description: "A raw version of a dynamic routing and transit navigation web utility with some built-in routes.",
+    category: "Prototype",
     stack: ["JavaScript", "Netlify"],
     url: "https://transit-router.netlify.app/"
   },
   {
     title: "Ideas Bucket",
     description: "Digital workspace and collection hub for tracking creative prototypes and ideas.",
-    category: "Prototypes",
+    category: "Prototype",
     stack: ["React", "Vercel"],
     url: "https://ideas-bucket.vercel.app/"
   }
@@ -47,7 +47,7 @@ const projects = [
 
 export default function App() {
   const [filter, setFilter] = useState("All");
-  const categories = ["All", "Data & Analytics", "Prototypes"];
+  const categories = ["All", "Data & Analytics", "Prototype"];
 
   const filteredProjects = filter === "All" 
     ? projects 
@@ -185,7 +185,7 @@ export default function App() {
               lineHeight: '1.2',
               flex: '1 1 300px'
             }}>
-              <span className="gradient-heading">Experiments - Analytics, App Prototypes</span>
+              <span className="gradient-heading">Analytics and Prototype Experiments</span>
             </h1>
 
             <p style={{ 
@@ -331,7 +331,7 @@ export default function App() {
           © {new Date().getFullYear()} Supriya Jois. All rights reserved.
         </div>
         <div style={{ color: '#a1a1aa', fontWeight: '500' }}>
-          Designed & Built by Supriya Jois
+          Designed & built by Supriya Jois
         </div>
       </footer>
 

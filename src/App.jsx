@@ -3,28 +3,28 @@ import React, { useState } from 'react';
 const projects = [
   {
     title: "Commodity Prices Forecast",
-    description: "Interactive data application for forecasting and analyzing prices for things like crude oil, wheat, corn and coffee .",
+    description: "A dashboard which forecasts and analyzes prices for things like crude oil, wheat, corn and coffee .",
     category: "Data & Analytics",
     stack: ["Python", "Streamlit"],
     url: "https://commodity-prices-forecast.streamlit.app/"
   },
   {
     title: "Song Reco Pilot",
-    description: "Interactive prompt recommendation pilot app built with Streamlit, which connects to an LLM -- or a RAG if the LLM API call fails .",
+    description: "An experimental prompt recommendation app which connects to an LLM to generate creative song ideas -- or a basic RAG implementation if the LLM API call fails .",
     category: "Data & Analytics",
     stack: ["Python", "Streamlit"],
     url: "https://songreco-pilot.streamlit.app/"
   },
   {
     title: "Board Game Analytics",
-    description: "Interactive data app tracking board game metrics and rankings, using PCA, K-means clustering and ridge regression.",
+    description: "An analysis of 680 board games using PCA, K-means clustering and ridge regression.",
     category: "Data & Analytics",
     stack: ["Python", "Render"],
     url: "https://toomanyboardgames.onrender.com"
   },
   {
     title: "Creator Basics - A Dashboard",
-    description: "A vanilla analysis of songs created on Flow Music.",
+    description: "A vanilla analysis of 100+ songs created on Flow Music.",
     category: "Data & Analytics",
     stack: ["React", "Vibefactory", "AI"],
     url: "https://p7f515941-ub4eae18f.vibefactory.ai"

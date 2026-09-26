@@ -10,7 +10,7 @@ const projects = [
   },
   {
     title: "Song Reco Pilot",
-    description: "An experimental prompt recommendation app which connects to an LLM to generate creative song ideas -- or a basic RAG implementation if the LLM API call fails .",
+    description: "An experimental prompt recommendation app which connects to an LLM to generate creative song ideas or a basic RAG implementation if the LLM API call fails .",
     category: "Data & Analytics",
     stack: ["Python", "Streamlit"],
     url: "https://songreco-pilot.streamlit.app/"

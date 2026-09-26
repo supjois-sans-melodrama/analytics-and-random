@@ -10,14 +10,14 @@ const projects = [
   },
   {
     title: "Song Reco Pilot",
-    description: "Interactive prompt recommendation pilot app built with Streamlit, which connects to an LLM -- or a RAG if LLM call fails .",
+    description: "Interactive prompt recommendation pilot app built with Streamlit, which connects to an LLM -- or a RAG if the LLM API call fails .",
     category: "Data & Analytics",
     stack: ["Python", "Streamlit"],
     url: "https://songreco-pilot.streamlit.app/"
   },
   {
     title: "Board Game Analytics",
-    description: "Interactive data app tracking board game metrics and rankings, using PCS, K-means clustering and ridge regression.",
+    description: "Interactive data app tracking board game metrics and rankings, using PCA, K-means clustering and ridge regression.",
     category: "Data & Analytics",
     stack: ["Python", "Render"],
     url: "https://toomanyboardgames.onrender.com"

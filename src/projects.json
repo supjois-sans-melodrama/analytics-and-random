@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Commodity Prices Forecast",
+    "description": "Interactive data application for forecasting and analyzing commodity market trends.",
+    "category": "Data & Analytics",
+    "stack": ["Python", "Streamlit"],
+    "url": "https://commodity-prices-forecast.streamlit.app/"
+  },
+  {
+    "id": 2,
+    "title": "Song Reco Pilot",
+    "description": "Interactive recommendation pilot app built with Streamlit.",
+    "category": "Data & Analytics",
+    "stack": ["Python", "Streamlit"],
+    "url": "https://songreco-pilot.streamlit.app/"
+  },
+  {
+    "id": 3,
+    "title": "Board Game Analytics",
+    "description": "Interactive data app tracking board game metrics and player stats.",
+    "category": "Data & Analytics",
+    "stack": ["Python", "Render"],
+    "url": "https://toomanyboardgames.onrender.com"
+  },
+  {
+    "id": 4,
+    "title": "Creator Basics - A Dashboard",
+    "description": "Analysis of songs created on Flow Music.",
+    "category": "Data & Analytics",
+    "stack": ["React", "Vibefactory", "AI"],
+    "url": "https://p7f515941-ub4eae18f.vibefactory.ai"
+  },
+  {
+    "id": 5,
+    "title": "Transit Router",
+    "description": "Dynamic routing and transit navigation web utility.",
+    "category": "Web Utilities",
+    "stack": ["JavaScript", "Netlify"],
+    "url": "https://transit-router.netlify.app/"
+  },
+  {
+    "id": 6,
+    "title": "Ideas Bucket",
+    "description": "Digital workspace and collection hub for tracking creative prototypes and ideas.",
+    "category": "Prototypes",
+    "stack": ["React", "Vercel"],
+    "url": "https://ideas-bucket.vercel.app/"
+  }
+]

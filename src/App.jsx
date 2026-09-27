@@ -198,7 +198,7 @@ export default function App() {
               flex: '1 1 280px',
               maxWidth: '380px'
             }}>
-              A collection of building experiments covering aspects of data science, dashboarding, and generative app prototypes which use external APIs such as Maps and LLMs like Gemini.
+              A collection of building experiments covering aspects of data science, dashboarding, and generative app prototypes which use external APIs such as Google Maps and LLMs like Gemini.
             </p>
           </div>
         </header>

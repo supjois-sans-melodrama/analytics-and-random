@@ -26,7 +26,7 @@ const projects = [
     title: "Creator Basics - A Dashboard",
     description: "A vanilla analysis of 100+ songs created on Flow Music.",
     category: "Data & Analytics",
-    stack: ["React", "Vibefactory", "AI"],
+    stack: ["React", "VibeFactory.ai"],
     url: "https://p7f515941-ub4eae18f.vibefactory.ai"
   },
   {

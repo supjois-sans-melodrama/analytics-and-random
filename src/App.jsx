@@ -42,6 +42,20 @@ const projects = [
     category: "Prototype",
     stack: ["React", "Gemini", "Vercel"],
     url: "https://ideas-bucket.vercel.app/"
+  },
+  {
+    title: "Weather Intelligence Harness",
+    description: "An experimental agent harness using GPT-5.5 and ReAct tool orchestration to route weather and travel queries across live APIs and a vector RAG.",
+    category: "Prototype",
+    stack: ["ReAct Harness", "GPT-5.5", "Vector RAG", "Python", "Streamlit"],
+    url: "https://globalweather-harness.streamlit.app/"
+  },
+  {
+    title: "Creative Helper Chat Bot",
+    description: "An AI-powered DIY assistant that helps you plan projects, choose materials, and solve home improvement and crafting challenges.",
+    category: "Prototype",
+    stack: ["React + TypeScript", "Express.js", "OpenAI GPT‑4o", "PostgreSQL + Drizzle ORM"],
+    url: "https://globalweather-harness.streamlit.app/"
   }
 ];
 
@@ -70,61 +84,58 @@ export default function App() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-        @keyframes floatOrb1 {
-          0% { transform: translate(0px, 0px) scale(1); }
-          50% { transform: translate(40px, -30px) scale(1.1); }
-          100% { transform: translate(0px, 0px) scale(1); }
+        .ambient-glow-left {
+          position: fixed;
+          top: 10%;
+          left: -100px;
+          width: 350px;
+          height: 350px;
+          background: radial-gradient(circle, rgba(14, 165, 233, 0.12) 0%, rgba(14, 165, 233, 0) 70%);
+          border-radius: 50%;
+          pointer-events: none;
+          z-index: 0;
         }
 
-        @keyframes floatOrb2 {
-          0% { transform: translate(0px, 0px) scale(1); }
-          50% { transform: translate(-50px, 40px) scale(1.15); }
-          100% { transform: translate(0px, 0px) scale(1); }
-        }
-
-        .orb-1 {
-          position: absolute;
-          top: -5%;
-          left: 10%;
+        .ambient-glow-right {
+          position: fixed;
+          bottom: 10%;
+          right: -100px;
           width: 380px;
           height: 380px;
-          background: radial-gradient(circle, rgba(14, 165, 233, 0.16) 0%, rgba(14, 165, 233, 0) 70%);
+          background: radial-gradient(circle, rgba(20, 184, 166, 0.1) 0%, rgba(20, 184, 166, 0) 70%);
           border-radius: 50%;
-          filter: blur(60px);
-          animation: floatOrb1 12s ease-in-out infinite;
           pointer-events: none;
           z-index: 0;
         }
 
-        .orb-2 {
-          position: absolute;
-          bottom: -5%;
-          right: 10%;
-          width: 420px;
-          height: 420px;
-          background: radial-gradient(circle, rgba(20, 184, 166, 0.14) 0%, rgba(20, 184, 166, 0) 70%);
-          border-radius: 50%;
-          filter: blur(70px);
-          animation: floatOrb2 15s ease-in-out infinite;
-          pointer-events: none;
-          z-index: 0;
+        .portfolio-frame {
+          max-width: 1020px;
+          width: 100%;
+          margin: 0 auto;
+          position: relative;
+          z-index: 1;
+          flex: 1;
+          padding: 0 12px;
+          box-sizing: border-box;
+          border-left: 2px solid transparent;
+          border-right: 2px solid transparent;
+          border-image: linear-gradient(to bottom, rgba(14, 165, 233, 0.4), rgba(45, 212, 191, 0.15), rgba(14, 165, 233, 0.4)) 1;
         }
 
         .glass-card {
-          background: rgba(18, 24, 38, 0.85);
-          backdrop-filter: blur(16px);
-          -webkit-backdrop-filter: blur(16px);
+          background: rgba(18, 24, 38, 0.92);
           border: 1px solid rgba(255, 255, 255, 0.08);
           box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.04);
           border-radius: 16px;
-          transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+          will-change: transform;
         }
 
         .glass-card:hover {
           transform: translateY(-3px);
-          background: rgba(24, 32, 50, 0.9);
-          border-color: rgba(45, 212, 191, 0.35);
-          box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.08), 0 15px 30px -10px rgba(0, 0, 0, 0.6);
+          background: rgba(24, 32, 50, 0.98);
+          border-color: rgba(45, 212, 191, 0.4);
+          box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), 0 12px 25px -8px rgba(0, 0, 0, 0.5);
         }
 
         .gradient-heading {
@@ -133,34 +144,38 @@ export default function App() {
           -webkit-text-fill-color: transparent;
         }
 
+        .gradient-name {
+          background: linear-gradient(135deg, #2dd4bf 0%, #38bdf8 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-weight: 600;
+          letter-spacing: -0.01em;
+        }
+
         .projects-grid {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
           gap: 16px;
         }
 
-        /* Luminous turquoise/blue polished button pill */
         .bright-turquoise-pill {
           background: linear-gradient(135deg, rgba(45, 212, 191, 0.38) 0%, rgba(14, 165, 233, 0.58) 100%);
           border: 1px solid rgba(153, 246, 228, 0.45);
           box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.4), 0 3px 12px rgba(14, 165, 233, 0.3);
           color: #ffffff;
-          transition: all 0.2s ease;
+          transition: transform 0.15s ease, filter 0.15s ease;
         }
 
         .bright-turquoise-pill:hover {
-          background: linear-gradient(135deg, rgba(94, 234, 212, 0.48) 0%, rgba(56, 189, 248, 0.68) 100%);
-          border-color: rgba(255, 255, 255, 0.8);
-          box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.7), 0 5px 18px rgba(45, 212, 191, 0.4);
+          filter: brightness(1.1);
           transform: translateY(-1px);
         }
       `}</style>
 
-      {/* Floating Animated Orbs */}
-      <div className="orb-1"></div>
-      <div className="orb-2"></div>
+      <div className="ambient-glow-left"></div>
+      <div className="ambient-glow-right"></div>
 
-      <div style={{ maxWidth: '1000px', width: '100%', margin: '0 auto', position: 'relative', zIndex: 1, flex: 1 }}>
+      <div className="portfolio-frame">
         
         {/* Header */}
         <header style={{ 
@@ -179,16 +194,20 @@ export default function App() {
           </div>
 
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '16px' }}>
-            <h1 style={{ 
-              fontSize: 'clamp(1.5rem, 3.2vw, 2.4rem)', 
-              fontWeight: '700', 
-              letterSpacing: '-0.03em',
-              margin: 0, 
-              lineHeight: '1.2',
-              flex: '1 1 300px'
-            }}>
-              <span className="gradient-heading">Analytics and Prototype Experiments</span>
-            </h1>
+            <div style={{ flex: '1 1 300px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+              <h1 style={{ 
+                fontSize: 'clamp(1.5rem, 3.2vw, 2.4rem)', 
+                fontWeight: '700', 
+                letterSpacing: '-0.03em',
+                margin: 0, 
+                lineHeight: '1.2'
+              }}>
+                <span className="gradient-heading">Analytics & Prototyping Playground</span>
+              </h1>
+              <div style={{ fontSize: '0.85rem', color: '#94a3b8' }}>
+                Designed & built by <span className="gradient-name">Supriya Jois</span>
+              </div>
+            </div>
 
             <p style={{ 
               color: '#94a3b8', 
@@ -198,7 +217,7 @@ export default function App() {
               flex: '1 1 280px',
               maxWidth: '380px'
             }}>
-              A collection of building experiments covering aspects of data science, dashboarding, and generative app prototypes which use external APIs such as Google Maps and LLMs like Gemini.
+              A collection of building experiments covering aspects of data science, dashboarding, and generative app prototypes which use external APIs such as Google Maps, GPT and Gemini.
             </p>
           </div>
         </header>
@@ -243,7 +262,6 @@ export default function App() {
             >
               <div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
-                  {/* Category Tag */}
                   <span style={{ 
                     fontSize: '0.65rem', 
                     textTransform: 'uppercase', 
@@ -258,7 +276,6 @@ export default function App() {
                     {project.category}
                   </span>
                   
-                  {/* Tech Stack */}
                   <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
                     {project.stack.map((tech, i) => (
                       <span key={i} style={{ 
@@ -283,7 +300,6 @@ export default function App() {
                 </p>
               </div>
 
-              {/* Compact Turquoise/Blue Pill Link */}
               <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
                 <a
                   href={project.url}
@@ -312,13 +328,15 @@ export default function App() {
 
       </div>
 
-      {/* Footer / Copyright */}
+      {/* Footer */}
       <footer style={{ 
-        maxWidth: '1000px', 
+        maxWidth: '1020px', 
         width: '100%', 
         margin: '40px auto 0 auto', 
         borderTop: '1px solid rgba(255, 255, 255, 0.06)', 
         paddingTop: '20px', 
+        paddingLeft: '12px',
+        paddingRight: '12px',
         display: 'flex', 
         justifyContent: 'space-between', 
         alignItems: 'center', 
@@ -327,13 +345,14 @@ export default function App() {
         position: 'relative',
         zIndex: 1,
         fontSize: '0.8rem',
-        color: '#64748b'
+        color: '#64748b',
+        boxSizing: 'border-box'
       }}>
         <div>
           © {new Date().getFullYear()} Supriya Jois. All rights reserved.
         </div>
-        <div style={{ color: '#94a3b8', fontWeight: '500' }}>
-          Designed & built by Supriya Jois
+        <div style={{ color: '#94a3b8' }}>
+          Analytics & Prototypes Lab
         </div>
       </footer>
 

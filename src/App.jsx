@@ -54,8 +54,8 @@ const projects = [
     title: "Creative Helper Chat Bot",
     description: "An AI-powered DIY assistant that helps you plan projects, choose materials, and solve home improvement and crafting challenges.",
     category: "Prototype",
-    stack: ["React + TypeScript", "Express.js", "OpenAI GPT‑4o", "PostgreSQL + Drizzle ORM"],
-    url: "https://globalweather-harness.streamlit.app/"
+    stack: ["Replit", "React + TypeScript", "Express.js", "OpenAI GPT‑4o", "PostgreSQL + Drizzle ORM"],
+    url: "https://diy-companion-chatbot.replit.app"
   }
 ];
 

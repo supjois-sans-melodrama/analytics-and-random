@@ -86,26 +86,28 @@ export default function App() {
 
         .ambient-glow-left {
           position: fixed;
-          top: 10%;
-          left: -100px;
-          width: 350px;
-          height: 350px;
-          background: radial-gradient(circle, rgba(14, 165, 233, 0.12) 0%, rgba(14, 165, 233, 0) 70%);
+          top: 15%;
+          left: -80px;
+          width: 450px;
+          height: 450px;
+          background: radial-gradient(circle, rgba(14, 165, 233, 0.28) 0%, rgba(14, 165, 233, 0.05) 50%, rgba(14, 165, 233, 0) 75%);
           border-radius: 50%;
           pointer-events: none;
           z-index: 0;
+          filter: blur(20px);
         }
 
         .ambient-glow-right {
           position: fixed;
-          bottom: 10%;
-          right: -100px;
-          width: 380px;
-          height: 380px;
-          background: radial-gradient(circle, rgba(20, 184, 166, 0.1) 0%, rgba(20, 184, 166, 0) 70%);
+          bottom: 15%;
+          right: -80px;
+          width: 480px;
+          height: 480px;
+          background: radial-gradient(circle, rgba(45, 212, 191, 0.24) 0%, rgba(45, 212, 191, 0.04) 50%, rgba(45, 212, 191, 0) 75%);
           border-radius: 50%;
           pointer-events: none;
           z-index: 0;
+          filter: blur(20px);
         }
 
         .portfolio-frame {
@@ -119,7 +121,7 @@ export default function App() {
           box-sizing: border-box;
           border-left: 2px solid transparent;
           border-right: 2px solid transparent;
-          border-image: linear-gradient(to bottom, rgba(14, 165, 233, 0.4), rgba(45, 212, 191, 0.15), rgba(14, 165, 233, 0.4)) 1;
+          border-image: linear-gradient(to bottom, rgba(14, 165, 233, 0.75), rgba(45, 212, 191, 0.4), rgba(14, 165, 233, 0.75)) 1;
         }
 
         .glass-card {
@@ -352,7 +354,7 @@ export default function App() {
           © {new Date().getFullYear()} Supriya Jois. All rights reserved.
         </div>
         <div style={{ color: '#94a3b8' }}>
-          Analytics & Prototypes Lab
+          Analytics & Prototyping Playground
         </div>
       </footer>
 

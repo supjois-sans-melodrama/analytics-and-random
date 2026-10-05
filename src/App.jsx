@@ -87,27 +87,27 @@ export default function App() {
         .ambient-glow-left {
           position: fixed;
           top: 15%;
-          left: -80px;
-          width: 450px;
-          height: 450px;
-          background: radial-gradient(circle, rgba(14, 165, 233, 0.28) 0%, rgba(14, 165, 233, 0.05) 50%, rgba(14, 165, 233, 0) 75%);
+          left: -120px;
+          width: 500px;
+          height: 500px;
+          background: radial-gradient(circle, rgba(14, 165, 233, 0.12) 0%, rgba(14, 165, 233, 0.03) 50%, rgba(14, 165, 233, 0) 80%);
           border-radius: 50%;
           pointer-events: none;
           z-index: 0;
-          filter: blur(20px);
+          filter: blur(40px);
         }
 
         .ambient-glow-right {
           position: fixed;
           bottom: 15%;
-          right: -80px;
-          width: 480px;
-          height: 480px;
-          background: radial-gradient(circle, rgba(45, 212, 191, 0.24) 0%, rgba(45, 212, 191, 0.04) 50%, rgba(45, 212, 191, 0) 75%);
+          right: -120px;
+          width: 500px;
+          height: 500px;
+          background: radial-gradient(circle, rgba(45, 212, 191, 0.1) 0%, rgba(45, 212, 191, 0.02) 50%, rgba(45, 212, 191, 0) 80%);
           border-radius: 50%;
           pointer-events: none;
           z-index: 0;
-          filter: blur(20px);
+          filter: blur(40px);
         }
 
         .portfolio-frame {
@@ -354,7 +354,7 @@ export default function App() {
           © {new Date().getFullYear()} Supriya Jois. All rights reserved.
         </div>
         <div style={{ color: '#94a3b8' }}>
-          Analytics & Prototyping Playground
+          Analytics & Prototypes Playground
         </div>
       </footer>
 

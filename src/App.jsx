@@ -56,6 +56,14 @@ const projects = [
     category: "Prototype",
     stack: ["Replit", "React + TypeScript", "Express.js", "OpenAI GPT‑4o", "PostgreSQL + Drizzle ORM"],
     url: "https://diy-companion-chatbot.replit.app"
+  },
+
+  {
+    title: "Research Summaries",
+    description: "A research paper summarizer which extracts the main topic, authors, abstract, experiment results and conclusion, with an audio version you can listen to.",
+    category: "Data & Analytics",
+    stack: ["Python", "Docker", "Gradio", "OpenRouter", "SnapDeploy"],
+    url: "https://research-summaries-1d6a7.containers.snapdeploy.app/"
   }
 ];
 

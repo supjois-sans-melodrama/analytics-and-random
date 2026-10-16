@@ -23,7 +23,7 @@ const projects = [
     url: "https://toomanyboardgames.onrender.com"
   },
   {
-    title: "Creator Basics - A Dashboard",
+    title: "A Basic Creator Dashboard",
     description: "A vanilla analysis of 100+ songs created on Flow Music.",
     category: "Data & Analytics",
     stack: ["React", "VibeFactory.ai"],
